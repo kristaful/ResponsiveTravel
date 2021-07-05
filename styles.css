@@ -18,6 +18,10 @@ ul {
 list-style: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* style social media icons & nav bar*/
 
 .socials {
@@ -92,33 +96,42 @@ nav {
   border-radius: 5px;
 }
 
-aside blockquote {
+div blockquote {
   quotes: "\201C" "\201D";
   font-size: 0.95em;
   font-family: Verdana, sans-serif, cursive;
   color: black;
-  background-color: #919194;
   padding: 10px;
   border-radius: 5px;
   border: double;
 }
 
-aside blockquote::before {
+div blockquote::before {
   content: open-quote;
   font-size: 1.6em;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
-aside blockquote::after {
+div blockquote::after {
   content: close-quote;
   font-size: 1.6em;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
-h1 {
+.quotepic {
+  display: none;
+}
+
+.quotes {
+  padding-top: 10px;
+  clear: both;
+}
+
+h1, h3 {
   text-align: center;
+  font-variant: small-caps;
 }
 
 h2 {
@@ -133,9 +146,13 @@ h2 {
   text-align: center;
 }
 
-footer, .address, .map, .quote1, .quote2, .quote3 {
-  clear: both; /*float the contents beneath the fork */
-}
+/* Footer style */
+  #footer {
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 20px;
+    clear: both; /*float the contents beneath the fork */
+  }
 
 /* "medium size" */
 @media screen and (min-width:621px) {
@@ -162,13 +179,24 @@ footer, .address, .map, .quote1, .quote2, .quote3 {
 
 .mobile-container {
   width: 66%; /* change the width so it doesn't get covered by the nav list at any window size */
-}
-
-
-}
-
-
-/* Footer style */
-  #footer {
-  text-align: center;
   }
+
+.quotepic {
+  display: inline-table;; /* bring visitor images in */
+}
+
+blockquote#cindy, blockquote#daniel {
+  float: right;
+  width: 70%;
+  margin: auto;
+}
+
+blockquote#calista {
+  float: left;
+  width: 33.33%;
+  margin: 10px;
+}
+
+
+
+}
